@@ -11,6 +11,8 @@ var cors = require('cors');
 // var pontoRouter = require('./routes/ponto');
 
 var produtoRouter = require('./routes/produtos');
+var loginRouter = require('./routes/login');
+var compraRouter = require('./routes/compras');
 
 
 
@@ -36,6 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/ponto', pontoRouter);
 
 app.use('/api', produtoRouter);
+app.use('/auth', loginRouter);
+app.use('/purchases', compraRouter);
 
 
 
